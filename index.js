@@ -12,6 +12,8 @@ function main() {
 
   // Second set of test cases
   runAssignment("1\n2,3");
+  runAssignment("//;\n1;2;3;6;9;15;21");
+  runAssignment("//;\n1;2;-3;-6;9;15;-21");
   // Assignment ends
 }
 
