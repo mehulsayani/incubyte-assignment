@@ -1,6 +1,6 @@
 function add(numbers) {
   if (!numbers) return 0;
-  const numberList = numbers.split(",");
+  const numberList = numbers.replace(/\n/g, ",").split(",");
   let sum = numberList.reduce((accumulator, currentValue) => {
     return accumulator + Number(currentValue);
   }, 0);
