@@ -3,9 +3,10 @@ const DEFAULT_DELIMITER_REGEX = /[\n,]/;
 const COMMA = ",";
 
 /**
- *
- * @param {*} numberList
- * @returns sum
+ * This function return the sum of all the non-negative items in the array
+ * It throws an error if any of the items is negative
+ * @param {Array} numberList
+ * @returns {number}
  */
 function getSum(numberList = []) {
   const negativeNumbers = [];
@@ -25,6 +26,12 @@ function getSum(numberList = []) {
   return sum;
 }
 
+/**
+ * This function returns the sum of all the non-negative items in the string
+ * It throws an error if any of the items is negative
+ * @param {string} numbers
+ * @returns {number}
+ */
 function add(numbers) {
   if (!numbers) return 0;
 
@@ -36,7 +43,6 @@ function add(numbers) {
     return getSum(numberList);
   }
   const numberList = numbers.split(DEFAULT_DELIMITER_REGEX);
-  console.log(numberList);
   return getSum(numberList);
 }
 
